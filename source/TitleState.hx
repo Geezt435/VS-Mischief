@@ -112,7 +112,7 @@ class TitleState extends MusicBeatState
 	}
 
 	var logoBl:FlxSprite;
-	var geezDance:FlxSprite;
+	var mischiefDance:FlxSprite;
 	var danceLeft:Bool = false;
 	var titleText:FlxSprite;
 
@@ -127,25 +127,26 @@ class TitleState extends MusicBeatState
 		add(bg);
 
 		logoBl = new FlxSprite(-150, -100);
-		logoBl.frames = Paths.getSparrowAtlas('logoBumpinGeezt');
+		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
 		if(FlxG.save.data.antialiasing) {
 			logoBl.antialiasing = true;
 		}
 		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24, false);
 		logoBl.updateHitbox();
-		logoBl.color = 0xB72FC167;
+		// logoBl.color = 0xB72FC167;
 
-		geezDance = new FlxSprite(FlxG.width * 0.56, FlxG.height * 0.3); // Basically like x and y in .xml, the more the further it is from top left
-		geezDance.frames = Paths.getSparrowAtlas('geezDance');
-		geezDance.animation.addByIndices('danceLeft', 'geezDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
-		geezDance.animation.addByIndices('danceRight', 'geezDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+		mischiefDance = new FlxSprite(FlxG.width * 0.56, FlxG.height * 0.3); // Basically like x and y in .xml, the more the further it is from top left
+		mischiefDance.frames = Paths.getSparrowAtlas('characters/mischief', 'shared');
+		mischiefDance.animation.addByIndices('danceLeft', 'Mischief Up', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+		mischiefDance.animation.addByIndices('danceRight', 'Mischief Down', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
 		if(FlxG.save.data.antialiasing) {
-			geezDance.antialiasing = true;
+			mischiefDance.antialiasing = true;
 		}
-		geezDance.flipX = true;
-		geezDance.alpha = 0.3;
-		geezDance.setGraphicSize(Std.int(geezDance.width * 1.2));
-		add(geezDance);
+		mischiefDance.color = 0xBEB15EFF;
+		mischiefDance.flipX = true;
+		mischiefDance.alpha = 1.3;
+		mischiefDance.setGraphicSize(Std.int(mischiefDance.width * 1.2));
+		add(mischiefDance);
 		add(logoBl);
 
 		titleText = new FlxSprite(100, FlxG.height * 0.8);
@@ -276,7 +277,7 @@ class TitleState extends MusicBeatState
 			if (FlxG.save.data.flashing)
 				titleText.animation.play('press');
 
-			FlxG.camera.flash(0xFFB4FFA4, 1);
+			FlxG.camera.flash(0xFF915EFF, 1);
 			FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
 
 			transitioning = true;
@@ -287,24 +288,29 @@ class TitleState extends MusicBeatState
 
 			new FlxTimer().start(2, function(tmr:FlxTimer)
 			{
+				// CAUSING EOF ERROR, LOL GIT GUD
+				// Note from, Geezt :)
+
 				// Get current version of Kade Engine
 				
-				var http = new haxe.Http("https://raw.githubusercontent.com/KadeDev/Kade-Engine/master/version.downloadMe");
-				var returnedData:Array<String> = [];
+				// var http = new haxe.Http("https://raw.githubusercontent.com/KadeDev/Kade-Engine/master/version.downloadMe");
+				// var returnedData:Array<String> = [];
 				
-				http.onData = function (data:String)
-				{
-					returnedData[0] = data.substring(0, data.indexOf(';'));
-					returnedData[1] = data.substring(data.indexOf('-'), data.length);
-					FlxG.switchState(new MainMenuState());
-				}
+				// http.onData = function (data:String)
+				// {
+				// 	returnedData[0] = data.substring(0, data.indexOf(';'));
+				// 	returnedData[1] = data.substring(data.indexOf('-'), data.length);
+				// 	FlxG.switchState(new MainMenuState());
+				// }
 				
-				http.onError = function (error) {
-				  trace('error: $error');
-				  FlxG.switchState(new MainMenuState()); // fail but we go anyway
-				}
+				// http.onError = function (error) {
+				//   trace('error: $error');
+				//   FlxG.switchState(new MainMenuState()); // fail but we go anyway
+				// }
 				
-				http.request();
+				// http.request();
+
+				FlxG.switchState(new MainMenuState());
 			});
 			// FlxG.sound.play(Paths.music('titleShoot'), 0.7);
 		}
@@ -355,9 +361,9 @@ class TitleState extends MusicBeatState
 		danceLeft = !danceLeft;
 
 		if (danceLeft)
-			geezDance.animation.play('danceRight');
+			mischiefDance.animation.play('danceRight');
 		else
-			geezDance.animation.play('danceLeft');
+			mischiefDance.animation.play('danceLeft');
 
 		FlxG.log.add(curBeat);
 
@@ -366,11 +372,11 @@ class TitleState extends MusicBeatState
 			case 0:
 				deleteCoolText();
 			case 1:
-				createCoolText(['Week End', 'by', 'Geezt Jeez']);
+				createCoolText(['Mischief', 'by', 'Azure']);
 				// credTextShit.visible = true;
 			case 3:
 				deleteCoolText();
-				createCoolText(['Thanks BeatBot', 'for Charting']);
+				createCoolText(['Coded', 'by GeeztJeez', 'Designs', 'by Sharp Knives']);
 				// credTextShit.text += '\npresent...';
 				// credTextShit.addText();
 			case 4:
@@ -391,13 +397,13 @@ class TitleState extends MusicBeatState
 			case 12:
 				deleteCoolText();
 			case 13:
-				createCoolText(['Friday', 'Night', 'Funkin']);
+				addMoreText('Friday');
 				// credTextShit.visible = true;
 			case 14:
-				addMoreText('VS');
+				addMoreText('Midnight');
 				// credTextShit.text += '\nNight';
 			case 15:
-				addMoreText('Geezt'); 
+				addMoreText('Mischief'); 
 				// credTextShit.text += '\nFunkin';
 			case 16:
 				skipIntro();
@@ -411,7 +417,9 @@ class TitleState extends MusicBeatState
 		if (!skippedIntro)
 		{
 
-			FlxG.camera.flash(0xFFA4FFA8, 1);
+			trace("Coded by G33ZT J33Z, just sayin'");
+			trace("So if any problem, tell it on the source code and ping me");
+			FlxG.camera.flash(0xFFD37EFF, 1);
 			remove(credGroup);
 
 			FlxTween.tween(logoBl,{y: -100}, 1.4, {ease: FlxEase.expoInOut});

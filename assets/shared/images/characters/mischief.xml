@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="mischief.png">
+	<!-- Created with Adobe Animate version 21.0.3.38773 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Mischief Down0000" x="0" y="0" width="693" height="834" frameX="0" frameY="-7" frameWidth="697" frameHeight="841"/>
+	<SubTexture name="Mischief Down0001" x="0" y="0" width="693" height="834" frameX="0" frameY="-7" frameWidth="697" frameHeight="841"/>
+	<SubTexture name="Mischief Down0002" x="693" y="0" width="695" height="838" frameX="-2" frameY="-3" frameWidth="697" frameHeight="841"/>
+	<SubTexture name="Mischief Down0003" x="1388" y="0" width="690" height="841" frameX="-7" frameY="0" frameWidth="697" frameHeight="841"/>
+	<SubTexture name="Mischief Down0004" x="2078" y="0" width="690" height="841" frameX="-7" frameY="0" frameWidth="697" frameHeight="841"/>
+	<SubTexture name="Mischief Down0005" x="2078" y="0" width="690" height="841" frameX="-7" frameY="0" frameWidth="697" frameHeight="841"/>
+	<SubTexture name="Mischief Down0006" x="1388" y="0" width="690" height="841" frameX="-7" frameY="0" frameWidth="697" frameHeight="841"/>
+	<SubTexture name="Mischief Down0007" x="1388" y="0" width="690" height="841" frameX="-7" frameY="0" frameWidth="697" frameHeight="841"/>
+	<SubTexture name="Mischief Down0008" x="2078" y="0" width="690" height="841" frameX="-7" frameY="0" frameWidth="697" frameHeight="841"/>
+	<SubTexture name="Mischief Down0009" x="2078" y="0" width="690" height="841" frameX="-7" frameY="0" frameWidth="697" frameHeight="841"/>
+	<SubTexture name="Mischief Idle Dance0000" x="2768" y="0" width="619" height="996" frameX="0" frameY="-8" frameWidth="661" frameHeight="1004"/>
+	<SubTexture name="Mischief Idle Dance0001" x="2768" y="0" width="619" height="996" frameX="0" frameY="-8" frameWidth="661" frameHeight="1004"/>
+	<SubTexture name="Mischief Idle Dance0002" x="3387" y="0" width="617" height="999" frameX="-25" frameY="-5" frameWidth="661" frameHeight="1004"/>
+	<SubTexture name="Mischief Idle Dance0003" x="3387" y="0" width="617" height="999" frameX="-25" frameY="-5" frameWidth="661" frameHeight="1004"/>
+	<SubTexture name="Mischief Idle Dance0004" x="4004" y="0" width="628" height="1000" frameX="-25" frameY="-4" frameWidth="661" frameHeight="1004"/>
+	<SubTexture name="Mischief Idle Dance0005" x="4004" y="0" width="628" height="1000" frameX="-25" frameY="-4" frameWidth="661" frameHeight="1004"/>
+	<SubTexture name="Mischief Idle Dance0006" x="4632" y="0" width="634" height="1002" frameX="-25" frameY="-2" frameWidth="661" frameHeight="1004"/>
+	<SubTexture name="Mischief Idle Dance0007" x="4632" y="0" width="634" height="1002" frameX="-25" frameY="-2" frameWidth="661" frameHeight="1004"/>
+	<SubTexture name="Mischief Idle Dance0008" x="5266" y="0" width="636" height="1004" frameX="-25" frameY="0" frameWidth="661" frameHeight="1004"/>
+	<SubTexture name="Mischief Idle Dance0009" x="5266" y="0" width="636" height="1004" frameX="-25" frameY="0" frameWidth="661" frameHeight="1004"/>
+	<SubTexture name="Mischief Idle Dance0010" x="5266" y="0" width="636" height="1004" frameX="-25" frameY="0" frameWidth="661" frameHeight="1004"/>
+	<SubTexture name="Mischief Idle Dance0011" x="5266" y="0" width="636" height="1004" frameX="-25" frameY="0" frameWidth="661" frameHeight="1004"/>
+	<SubTexture name="Mischief Idle Dance0012" x="5266" y="0" width="636" height="1004" frameX="-25" frameY="0" frameWidth="661" frameHeight="1004"/>
+	<SubTexture name="Mischief Idle Dance0013" x="5266" y="0" width="636" height="1004" frameX="-25" frameY="0" frameWidth="661" frameHeight="1004"/>
+	<SubTexture name="Mischief Right0000" x="5902" y="0" width="781" height="910"/>
+	<SubTexture name="Mischief Right0001" x="5902" y="0" width="781" height="910"/>
+	<SubTexture name="Mischief Right0002" x="6683" y="0" width="771" height="910" frameX="0" frameY="0" frameWidth="781" frameHeight="910"/>
+	<SubTexture name="Mischief Right0003" x="0" y="1004" width="767" height="910" frameX="0" frameY="0" frameWidth="781" frameHeight="910"/>
+	<SubTexture name="Mischief Right0004" x="767" y="1004" width="767" height="910" frameX="0" frameY="0" frameWidth="781" frameHeight="910"/>
+	<SubTexture name="Mischief Right0005" x="767" y="1004" width="767" height="910" frameX="0" frameY="0" frameWidth="781" frameHeight="910"/>
+	<SubTexture name="Mischief Right0006" x="0" y="1004" width="767" height="910" frameX="0" frameY="0" frameWidth="781" frameHeight="910"/>
+	<SubTexture name="Mischief Right0007" x="0" y="1004" width="767" height="910" frameX="0" frameY="0" frameWidth="781" frameHeight="910"/>
+	<SubTexture name="Mischief Right0008" x="767" y="1004" width="767" height="910" frameX="0" frameY="0" frameWidth="781" frameHeight="910"/>
+	<SubTexture name="Mischief Right0009" x="767" y="1004" width="767" height="910" frameX="0" frameY="0" frameWidth="781" frameHeight="910"/>
+	<SubTexture name="Mischief Left0000" x="1534" y="1004" width="717" height="939" frameX="-5" frameY="-4" frameWidth="722" frameHeight="943"/>
+	<SubTexture name="Mischief Left0001" x="1534" y="1004" width="717" height="939" frameX="-5" frameY="-4" frameWidth="722" frameHeight="943"/>
+	<SubTexture name="Mischief Left0002" x="2251" y="1004" width="722" height="942" frameX="0" frameY="-1" frameWidth="722" frameHeight="943"/>
+	<SubTexture name="Mischief Left0003" x="2973" y="1004" width="722" height="943"/>
+	<SubTexture name="Mischief Left0004" x="3695" y="1004" width="722" height="943"/>
+	<SubTexture name="Mischief Left0005" x="3695" y="1004" width="722" height="943"/>
+	<SubTexture name="Mischief Left0006" x="2973" y="1004" width="722" height="943"/>
+	<SubTexture name="Mischief Left0007" x="2973" y="1004" width="722" height="943"/>
+	<SubTexture name="Mischief Left0008" x="3695" y="1004" width="722" height="943"/>
+	<SubTexture name="Mischief Left0009" x="3695" y="1004" width="722" height="943"/>
+	<SubTexture name="Mischief Up0000" x="4417" y="1004" width="632" height="994"/>
+	<SubTexture name="Mischief Up0001" x="4417" y="1004" width="632" height="994"/>
+	<SubTexture name="Mischief Up0002" x="5049" y="1004" width="619" height="991" frameX="-3" frameY="-3" frameWidth="632" frameHeight="994"/>
+	<SubTexture name="Mischief Up0003" x="5668" y="1004" width="613" height="988" frameX="-6" frameY="-6" frameWidth="632" frameHeight="994"/>
+	<SubTexture name="Mischief Up0004" x="6281" y="1004" width="613" height="988" frameX="-6" frameY="-6" frameWidth="632" frameHeight="994"/>
+	<SubTexture name="Mischief Up0005" x="6281" y="1004" width="613" height="988" frameX="-6" frameY="-6" frameWidth="632" frameHeight="994"/>
+	<SubTexture name="Mischief Up0006" x="5668" y="1004" width="613" height="988" frameX="-6" frameY="-6" frameWidth="632" frameHeight="994"/>
+	<SubTexture name="Mischief Up0007" x="5668" y="1004" width="613" height="988" frameX="-6" frameY="-6" frameWidth="632" frameHeight="994"/>
+	<SubTexture name="Mischief Up0008" x="6281" y="1004" width="613" height="988" frameX="-6" frameY="-6" frameWidth="632" frameHeight="994"/>
+	<SubTexture name="Mischief Up0009" x="6281" y="1004" width="613" height="988" frameX="-6" frameY="-6" frameWidth="632" frameHeight="994"/>
+</TextureAtlas>

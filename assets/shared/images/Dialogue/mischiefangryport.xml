@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="mischiefangryport.png">
+	<!-- Created with AK-45 Missile Launcher -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="enterstart0000" x="0" y="463" width="519" height="463"/>
+	<SubTexture name="enterstart0001" x="519" y="0" width="519" height="463"/>
+	<SubTexture name="enterstart0002" x="519" y="0" width="519" height="463"/>
+	<SubTexture name="enterstart0003" x="519" y="463" width="519" height="463"/>
+	<SubTexture name="enterstart0004" x="519" y="463" width="519" height="463"/>
+	<SubTexture name="enterstart0005" x="0" y="0" width="519" height="463"/>
+	<SubTexture name="enterstart0006" x="0" y="0" width="519" height="463"/>
+	<SubTexture name="enterstart0007" x="0" y="0" width="519" height="463"/>
+	<SubTexture name="enterstart0008" x="0" y="0" width="519" height="463"/>
+</TextureAtlas>

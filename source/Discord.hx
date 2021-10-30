@@ -12,7 +12,8 @@ class DiscordClient
 	{
 		trace("Discord Client starting...");
 		DiscordRpc.start({
-			clientID: "872847201230028870", // change this to what ever the fuck you want lol
+			clientID: "903530458892099614", // change this to what ever the fuck you want lol
+			// Currently Misschef or Mischief logo
 			onReady: onReady,
 			onError: onError,
 			onDisconnected: onDisconnected

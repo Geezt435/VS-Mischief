@@ -1,3 +1,2 @@
 stage
-blackmarketstage
-blackmarkettrailstage
+mischiefstage

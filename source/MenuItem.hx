@@ -41,9 +41,11 @@ class MenuItem extends FlxSpriteGroup
 		if (isFlashing)
 			flashingInt += 1;
 	
-		if (flashingInt % fakeFramerate >= Math.floor(fakeFramerate / 2))
-			week.color = 0xFF33ffff;
-		else if (FlxG.save.data.flashing)
-			week.color = FlxColor.WHITE;
+		if (flashingInt % fakeFramerate >= Math.floor(fakeFramerate / 2)) {
+			week.color = 0xFFFF94FF;
+			FlxG.camera.flash(0xB0FF78FF, 1);
+		} else if (FlxG.save.data.flashing) {
+			week.color = 0xFFFFD7FF;
+		}
 	}
 }

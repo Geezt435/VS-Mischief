@@ -1,0 +1,7 @@
+idle 0 0
+singUP 43 0
+singRIGHT -117 -84
+singLEFT 191 -45
+singDOWN 156 -148
+breathing -101 -87
+laugh -11 0

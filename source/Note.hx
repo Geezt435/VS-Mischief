@@ -129,8 +129,8 @@ class Note extends FlxSprite
 			
 			switch (noteTypeCheck)
 			{
-				case 'geeztnote':
-					frames = Paths.getSparrowAtlas('NOTE_GEEZT');
+				case 'mischief_note':
+					frames = Paths.getSparrowAtlas('Mischief_Note');
 					for (i in 0...4) {
 						animation.addByPrefix(dataColor[i] + 'Scroll', dataColor[i] + ' alone'); // Normal notes
 						animation.addByPrefix(dataColor[i] + 'hold', dataColor[i] + ' hold'); // Hold
@@ -138,21 +138,6 @@ class Note extends FlxSprite
 					}
 
 					setGraphicSize(Std.int(width * 0.7));
-					updateHitbox();
-					
-					if(FlxG.save.data.antialiasing) {
-						antialiasing = true;
-					}
-
-				case 'geezthard':
-					frames = Paths.getSparrowAtlas('GEEZT_HARD');
-					for (i in 0...4) {
-						animation.addByPrefix(dataColor[i] + 'Scroll', dataColor[i] + ' alone'); // Normal notes
-						animation.addByPrefix(dataColor[i] + 'hold', dataColor[i] + ' hold'); // Hold
-						animation.addByPrefix(dataColor[i] + 'holdend', dataColor[i] + ' tail'); // Tails
-					}
-
-					setGraphicSize(Std.int(width * 0.42));
 					updateHitbox();
 					
 					if(FlxG.save.data.antialiasing) {

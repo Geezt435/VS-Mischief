@@ -40,20 +40,14 @@ class DialogueBox extends FlxSpriteGroup
 
 		switch (PlayState.SONG.song.toLowerCase())
 		{
-			// case 'senpai':
-			// 	FlxG.sound.playMusic(Paths.music('Lunchbox'), 0);
-			// 	FlxG.sound.music.fadeIn(1, 0, 0.8);
-			// case 'thorns':
-			// 	FlxG.sound.playMusic(Paths.music('LunchboxScary'), 0);
-			// 	FlxG.sound.music.fadeIn(1, 0, 0.8);
-			case 'echo-enzyme':
-				FlxG.sound.playMusic(Paths.music('chiptune'), 0);
+			case 'lights':
+				FlxG.sound.playMusic(Paths.music('breakfast'), 0);
 				FlxG.sound.music.fadeIn(1, 0, 0.8);
-			case 'bioluminescent':
-				FlxG.sound.playMusic(Paths.music('chiptune'), 0);
+			case 'electro':
+				FlxG.sound.playMusic(Paths.music('breakfast'), 0);
 				FlxG.sound.music.fadeIn(1, 0, 0.8);
-			case 'jeez':
-				FlxG.sound.playMusic(Paths.music('chiptune'), 0);
+			case 'thunder':
+				FlxG.sound.playMusic(Paths.music('breakfast'), 0);
 				FlxG.sound.music.fadeIn(1, 0, 0.8);
 		}
 
@@ -74,15 +68,15 @@ class DialogueBox extends FlxSpriteGroup
 		var hasDialog = false;
 		switch (PlayState.SONG.song.toLowerCase())
 		{
-			case 'echo enzyme' | 'bioluminescent' | 'jeez':
+			case 'lights' | 'electro' | 'thunder':
 				hasDialog = true;
-				box.frames = Paths.getSparrowAtlas('Dialogue/geezDBOX');
-				box.animation.addByPrefix('normalOpen', 'Geez Textbox Spawn instance 1', 24, false);
-				box.animation.addByIndices('normal', 'Geez Textbox Spawn instance 1', [11], "", 24);
+				box.frames = Paths.getSparrowAtlas('speech_bubble_talking');
+				box.animation.addByPrefix('normalOpen', 'Speech Bubble Normal Open', 24, false);
+				box.animation.addByIndices('normal', 'speech bubble normal', [11], "", 24);
 				box.width = 200;
 				box.height = 200;
 				box.x = -120;
-				box.y = 140;
+				box.y = 420;
 		}
 
 		this.dialogueList = dialogueList;
@@ -90,10 +84,11 @@ class DialogueBox extends FlxSpriteGroup
 		if (!hasDialog)
 			return;
 		
-		if (PlayState.SONG.song.toLowerCase() == 'echo enzyme' || PlayState.SONG.song.toLowerCase() == 'bioluminescent') {
+		// Portrait Left
+		if (PlayState.SONG.song.toLowerCase() == 'lights' || PlayState.SONG.song.toLowerCase() == 'electro') {
 			portraitLeft = new FlxSprite(40, 103);
-			portraitLeft.frames = Paths.getSparrowAtlas('Dialogue/GeezFACTS');
-			portraitLeft.animation.addByPrefix('enter', 'GeezFACTS Enter instance 1', 24, false);
+			portraitLeft.frames = Paths.getSparrowAtlas('Dialogue/mischiefport');
+			portraitLeft.animation.addByPrefix('enter', 'enterstart', 24, false);
 			portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.12));
 			portraitLeft.updateHitbox();
 			portraitLeft.scrollFactor.set();
@@ -101,19 +96,20 @@ class DialogueBox extends FlxSpriteGroup
 			add(portraitLeft);
 			portraitLeft.visible = false;
 		}
-		else if (PlayState.SONG.song.toLowerCase() == 'jeez') {
-			portraitLeft = new FlxSprite(40, 103);
-			portraitLeft.frames = Paths.getSparrowAtlas('Dialogue/GeezTired');
-			portraitLeft.animation.addByPrefix('enter', 'GeezTired Enter instance 1', 24, false);
-			portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.12 ));
+		else if (PlayState.SONG.song.toLowerCase() == 'thunder') {
+			portraitLeft = new FlxSprite(150, 150);
+			portraitLeft.frames = Paths.getSparrowAtlas('Dialogue/mischiefangryport');
+			portraitLeft.animation.addByPrefix('enter', 'enterstart', 24, false);
+			portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.12));
 			portraitLeft.updateHitbox();
 			portraitLeft.scrollFactor.set();
 			add(portraitLeft);
 			portraitLeft.visible = false;
 		}
 	
-		if (PlayState.SONG.song.toLowerCase() == 'echo enzyme' || PlayState.SONG.song.toLowerCase() == 'bioluminescent' || PlayState.SONG.song.toLowerCase() == 'jeez' ) {
-			portraitRight = new FlxSprite(770, 250);
+		// Portrait Right
+		if (PlayState.SONG.song.toLowerCase() == 'lights' || PlayState.SONG.song.toLowerCase() == 'electro' || PlayState.SONG.song.toLowerCase() == 'thunder' ) {
+			portraitRight = new FlxSprite(770, 280);
 			portraitRight.frames = Paths.getSparrowAtlas('Dialogue/boyfriendPort');
 			portraitRight.animation.addByPrefix('enter', 'BF portrait enter instance 1', 24, false);
 			portraitRight.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0.14));
@@ -133,18 +129,19 @@ class DialogueBox extends FlxSpriteGroup
 
 		if (!talkingRight)
 		{
-			// box.flipX = true;
+			box.flipX = true;
 		}
 
-		if (PlayState.SONG.song.toLowerCase() == 'echo enzyme' || PlayState.SONG.song.toLowerCase() == 'bioluminescent' || PlayState.SONG.song.toLowerCase() == 'jeez' ) {
-			dropText = new FlxText(246, 506, Std.int(FlxG.width * 0.6), "", 48);
-			dropText.font = 'Minecraft';
+		if (PlayState.SONG.song.toLowerCase() == 'lights' || PlayState.SONG.song.toLowerCase() == 'electro' || PlayState.SONG.song.toLowerCase() == 'thunder' ) {
+			dropText = new FlxText(234, 506, Std.int(FlxG.width * 0.6), "", 48);
+			dropText.setFormat(Paths.font("vcr.ttf"), 48);
 			dropText.color = 0xBF000000;
+			dropText.alpha = 0.6;
 			add(dropText);
 
 			swagDialogue = new FlxTypeText(240, 500, Std.int(FlxG.width * 0.6), "", 48);
-			swagDialogue.font = 'Minecraft';
-			swagDialogue.color = 0xFF50997E;
+			swagDialogue.setFormat(Paths.font("vcr.ttf"), 48);
+			swagDialogue.color = 0xFF000000;
 			swagDialogue.sounds = [FlxG.sound.load(Paths.sound('pixelText'), 0.6)];
 			add(swagDialogue);
 		}
